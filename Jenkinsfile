@@ -32,7 +32,7 @@ pipeline {
         		withSonarQubeEnv('sonarqube-9.7.1') { 
               			//sh "sudo rm ~/.m2/repository/org/owasp/dependency-check-data/7.0/jsrepository.json"
         			
-        			sh "npm run sonar:sonar -Dsonar.login=admin -Dsonar.password=sonar"
+        			sh "npm run sonar"
     			}
         	}
             }
