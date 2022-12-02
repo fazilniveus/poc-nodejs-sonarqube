@@ -23,11 +23,11 @@ pipeline {
 	    stage('SonarQube analysis') {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
-              			sh "
-           				-Dsonar.projectKey=network 
-           				-Dsonar.sources=. 
-           				-Dsonar.css.node=. 
-          				 -Dsonar.host.url=http://34.93.157.58:9000 
+              			sh "	/bin/sonar-scanner \
+           				-Dsonar.projectKey=network \
+           				-Dsonar.sources=. \
+           				-Dsonar.css.node=. \
+          				 -Dsonar.host.url=http://34.93.157.58:9000 \
          				  -Dsonar.login=sqp_f741d02efb6d27d1a32f33fba69855545cdfc646"
     			}
         	}
