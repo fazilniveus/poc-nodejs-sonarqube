@@ -19,13 +19,7 @@ pipeline {
 			    	checkout scm
 		    }
 	    }
-	    stage('build') {
-              steps {
-                  echo 'building the software'
-                  sh 'npm install'
-              }
-          }
-	
+	   
 	    stage('SonarQube analysis') {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
