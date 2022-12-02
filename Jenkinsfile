@@ -23,7 +23,7 @@ pipeline {
 	    stage('SonarQube analysis') {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
-              			sh "	npm run sonar /
+              			sh "	npm run sonar \
            				-Dsonar.projectKey=network \
            				-Dsonar.sources=. \
            				-Dsonar.css.node=. \
