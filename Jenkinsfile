@@ -23,7 +23,7 @@ pipeline {
 	    stage('SonarQube analysis') {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
-              			sh "${tool("sonarqube")}/bin/sonar-scanner \
+              			sh "${tool("sonarqube-9.7.1")}/bin/sonar-scanner \
            				-Dsonar.projectKey=network \
            				-Dsonar.sources=. \
            				-Dsonar.css.node=. \
